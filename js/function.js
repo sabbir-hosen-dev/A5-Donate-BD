@@ -1,7 +1,4 @@
-function idToNumberConvert(id) {
-  const item = document.getElementById(id).innerText;
-  return parseFloat(item);
-}
+
 
 function sectionShow(value) {
   if (value) {
