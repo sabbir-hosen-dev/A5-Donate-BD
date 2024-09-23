@@ -22,9 +22,28 @@ function sectionShow(value) {
 }
 
 
-function historyAdd (){
-  
+function historyAdd (donate,selection){
+  const createCard = `
+    <div class=" border-2 border-gray p-4 rounded-lg">
+      <p class="font-semibold mb-2">${donate} Taka is Donate for ${selection}</p>
+      <p class="bg-[#1111110d] rounded-md p-1">Date: ${new Date().toLocaleDateString('en-US', { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: true, timeZone: 'Asia/Dhaka' })}</p>
+    </div>
+  `
+  const container = document.createElement('div');
+  container.innerHTML = createCard;
+
+  document.getElementById('history').appendChild(container.firstElementChild);
+
 }
 
 
 
+const donation = document.getElementById("donateBtn");
+const history = document.getElementById("historyBtn");
+
+donation.addEventListener("click", function(){
+  sectionShow(false)
+} )
+history.addEventListener("click", function(){
+  sectionShow(true) 
+})

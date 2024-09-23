@@ -23,6 +23,7 @@ const input = document.getElementsByClassName("donate-input");
 const button = document.getElementsByClassName("donate ");
 const message = document.getElementsByClassName("rong-message");
 const staticAmount = document.getElementsByClassName("staticAmount");
+const titels = document.getElementsByClassName("title");
 const balance = document.getElementById("balance");
 
 const nKhali = document.getElementById("nKhali");
@@ -56,15 +57,14 @@ for (let i = 0; i < button.length; i++) {
         modal.classList.remove("hidden");
 
         totalAmaunt = totalAmaunt - inputBalance;
-        console.log(totalAmaunt)
 
         balance.innerText = totalAmaunt;
 
         let cardValue = parseFloat(staticAmount[i].innerText);
 
         staticAmount[i].innerText = cardValue + inputBalance;
-
-
+        let title = titels[i].innerText;
+        historyAdd(inputBalance,title)
         
 
         document
@@ -79,3 +79,8 @@ for (let i = 0; i < button.length; i++) {
     }
   });
 }
+
+
+document.getElementById("blog").addEventListener("click", function(){
+  window.location.href = '../Blog.html';
+})
