@@ -63,37 +63,54 @@
         -webkit-appearance: none;
         margin: 0;
       }
+      .stickyy {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+      .sticky-btn{
+        padding: 15px;
+        backdrop-filter: blur(10px);
+      }
     </style>
   </head>
   <body class="font-lexed text-gray">
-    <header class="bg-[#F9F7F3] py-4 pb-6">
-      <nav class="wraper flex justify-between items-center flex-wrap gap-5">
-        <button class="btn">Blog</button>
-        <div class="flex gap-2 items-center sm:order-2 order-3">
-          <img class="w-9" src="assets/logo.png" alt="" />
-          <p class="heading">Donate Bangladesh</p>
-        </div>
-        <div class="flex items-center gap-1 sm:order-3 order-2">
-          <img src="assets/coin.png" alt="" />
-          <h4 class="text-lg font-bold"><span id="balance">5500</span> BDT</h4>
-        </div>
-      </nav>
-    </header>
-    <section class="">
-      <div class="wrapper navigate flex justify-center gap-5 items-center py-10">
+    <div id="steckey">
+      <header id="header" class="bg-[#F9F7F3] py-4 pb-6">
+        <nav
+          id="nav"
+          class="wraper flex sticky top-0 left-0 justify-between items-center flex-wrap gap-5"
+        >
+          <button class="btn">Blog</button>
+          <div class="flex gap-2 items-center sm:order-2 order-3">
+            <img class="w-9" src="assets/logo.png" alt="" />
+            <p class="heading">Donate Bangladesh</p>
+          </div>
+          <div class="flex items-center gap-1 sm:order-3 order-2">
+            <img src="assets/coin.png" alt="" />
+            <h4 class="text-lg font-bold">
+              <span id="balance">5500</span> BDT
+            </h4>
+          </div>
+        </nav>
+      </header>
+      <section
+      id="btn-wrap"
+        class="wrapper navigate flex justify-center gap-5 items-center py-10"
+      >
         <button class="btn btn-active hover:text-secondary">Donation</button>
         <button class="btn btn-normal">History</button>
-      </div>
-    </section>
+      </section>
+    </div>
+
     <section class="wraper">
-
-      
       <div
         class="donate-wrap grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-[#1111110d] mb-6"
       >
         <div class="">
           <img src="assets/noakhali.png" alt="" />
-        </div> 
+        </div>
         <div class="">
           <span class="bg-[#1111110d] inline-block rounded-md gap-1 p-2 px-4">
             <div class="flex justify-center items-center gap-2">
@@ -125,13 +142,12 @@
         </div>
       </div>
 
-
       <div
         class="donate-wrap grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-[#1111110d] mb-6"
       >
         <div class="">
           <img src="assets/noakhali.png" alt="" />
-        </div> 
+        </div>
         <div class="">
           <span class="bg-[#1111110d] inline-block rounded-md gap-1 p-2 px-4">
             <div class="flex justify-center items-center gap-2">
@@ -163,13 +179,12 @@
         </div>
       </div>
 
-
       <div
         class="donate-wrap grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-[#1111110d] mb-6"
       >
         <div class="">
           <img src="assets/noakhali.png" alt="" />
-        </div> 
+        </div>
         <div class="">
           <span class="bg-[#1111110d] inline-block rounded-md gap-1 p-2 px-4">
             <div class="flex justify-center items-center gap-2">
@@ -201,13 +216,12 @@
         </div>
       </div>
 
-
       <div
         class="donate-wrap grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-[#1111110d] mb-6"
       >
         <div class="">
           <img src="assets/noakhali.png" alt="" />
-        </div> 
+        </div>
         <div class="">
           <span class="bg-[#1111110d] inline-block rounded-md gap-1 p-2 px-4">
             <div class="flex justify-center items-center gap-2">
@@ -239,13 +253,12 @@
         </div>
       </div>
 
-
       <div
-        class="donate-wrap grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-[#1111110d] mb-6 "
+        class="donate-wrap grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-[#1111110d] mb-6"
       >
         <div class="">
           <img src="assets/noakhali.png" alt="" />
-        </div> 
+        </div>
         <div class="">
           <span class="bg-[#1111110d] inline-block rounded-md gap-1 p-2 px-4">
             <div class="flex justify-center items-center gap-2">
@@ -277,13 +290,12 @@
         </div>
       </div>
 
-
       <div
         class="donate-wrap grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-[#1111110d] mb-6"
       >
         <div class="">
           <img src="assets/noakhali.png" alt="" />
-        </div> 
+        </div>
         <div class="">
           <span class="bg-[#1111110d] inline-block rounded-md gap-1 p-2 px-4">
             <div class="flex justify-center items-center gap-2">
