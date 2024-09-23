@@ -82,5 +82,5 @@ for (let i = 0; i < button.length; i++) {
 
 
 document.getElementById("blog").addEventListener("click", function(){
-  window.location.href = '../Blog.html';
+  window.location.href = '../A5-Donate-BD/Blog.html';
 })
