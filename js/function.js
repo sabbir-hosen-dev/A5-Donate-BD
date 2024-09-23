@@ -11,6 +11,8 @@ function sectionShow(value) {
     document.getElementById("donateBtn").classList.add("btn-normal")
     document.getElementById("historyBtn").classList.add("btn-active")
     document.getElementById("historyBtn").classList.remove("btn-normal")
+
+    document.getElementById("history").classList.remove("hidden")
   } else {
     document.getElementById("donate-wrap").classList.remove("hidden");
     document.getElementById("history").classList.add("hidden");
@@ -18,13 +20,15 @@ function sectionShow(value) {
     document.getElementById("historyBtn").classList.remove("btn-normal")
     document.getElementById("donateBtn").classList.remove("btn-normal")
     document.getElementById("historyBtn").classList.add("btn-normal")
+
+    document.getElementById("history").classList.add("hidden")
   }
 }
 
 
 function historyAdd (donate,selection){
   const createCard = `
-    <div class=" border-2 border-gray p-4 rounded-lg">
+    <div class="mb-5 border-2 border-gray p-4 rounded-lg">
       <p class="font-semibold mb-2">${donate} Taka is Donate for ${selection}</p>
       <p class="bg-[#1111110d] rounded-md p-1">Date: ${new Date().toLocaleDateString('en-US', { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: true, timeZone: 'Asia/Dhaka' })}</p>
     </div>
