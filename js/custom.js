@@ -18,3 +18,11 @@ function stickyNavbar() {
 window.onscroll = function () {
   stickyNavbar();
 };
+
+
+
+
+const input = document.getElementsByClassName("donate-input");
+const button = document.getElementsByClassName("donate ");
+
+for(let )

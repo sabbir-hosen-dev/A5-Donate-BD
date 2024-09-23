@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <!-- daisy ui link  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Load Tailwind via CDN with Config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#B4F461",
+              secondary: "#111111",
+              gray: "#111111b3",
+            },
+            fontFamily: {
+              lexed: ['"Lexend"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .heading {
+          @apply font-bold text-lg text-secondary;
+        }
+        .btn {
+          @apply bg-primary rounded-md cursor-pointer transition-all ease-in-out hover:bg-gray hover:text-white duration-300 border-none py-3 px-8 text-secondary font-bold text-base font-lexed;
+        }
+        .btn-active {
+          @apply rounded-md cursor-pointer transition-all ease-in-out hover:bg-primary hover:border-primary duration-300 py-3 px-8 text-secondary border-2 border-primary bg-primary font-bold text-base font-lexed text-secondary hover:text-secondary;
+        }
+        .btn-normal {
+          @apply rounded-md cursor-pointer transition-all ease-in-out hover:bg-primary hover:border-primary duration-300 py-3 px-8 text-gray hover:text-secondary border-2 border-gray bg-transparent font-bold text-base font-lexed;
+        }
+        .wraper {
+          @apply container m-auto max-w-[1250px] px-5;
+        }
+      }
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      .stickyy {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+      .sticky-btn {
+        padding: 15px;
+        backdrop-filter: blur(10px);
+      }
+    </style>
+  </head>
+  <body class="font-lexed text-gray">
+    <div id="steckey">
+      <header id="header" class="bg-[#F9F7F3] py-4 pb-6">
+        <nav
+          id="nav"
+          class="wraper flex sticky top-0 left-0 justify-between items-center flex-wrap gap-5"
+        >
+          <button id="homtBtn" class="btn">home</button>
+          <div class="flex gap-2 items-center sm:order-2 order-3">
+            <img class="w-9" src="assets/logo.png" alt="" />
+            <p class="heading">Donate Bangladesh</p>
+          </div>
+          <div class="flex items-center gap-1 sm:order-3 order-2">
+            <img src="assets/coin.png" alt="" />
+            <h4 class="text-lg font-bold">
+              <span id="balance">5500</span> BDT
+            </h4>
+          </div>
+        </nav>
+      </header>
+    </div>
+
+    <!-- main part start -->
+
+    <div class="wraper">
+      <div
+        class="flex mt-20 flex-col justify-center items-center px-5 md:px-20"
+      >
+
+
+        <div class="">
+          <h1 class="font-bold text-left text-2xl text-secondary mb-5">
+            Important FAQ
+          </h1>
+        </div>
+
+        
+        <div
+          tabindex="0"
+          class="collapse mb-4  collapse-arrow border-base-300 bg-base-200 border"
+        >
+          <div class="collapse-title text-xl font-medium">
+            Focus me to see content
+          </div>
+          <div class="collapse-content">
+            <p>tabindex="0" attribute is necessary to make the div focusable</p>
+          </div>
+        </div>
+
+
+        <div
+          tabindex="0"
+          class="collapse mb-4  collapse-arrow border-base-300 bg-base-200 border"
+        >
+          <div class="collapse-title text-xl font-medium">
+            Focus me to see content
+          </div>
+          <div class="collapse-content">
+            <p>tabindex="0" attribute is necessary to make the div focusable</p>
+          </div>
+        </div>
+
+
+        <div
+          tabindex="0"
+          class="collapse mb-4  collapse-arrow border-base-300 bg-base-200 border"
+        >
+          <div class="collapse-title text-xl font-medium">
+            Focus me to see content
+          </div>
+          <div class="collapse-content">
+            <p>tabindex="0" attribute is necessary to make the div focusable</p>
+          </div>
+        </div>
+
+
+        <div
+          tabindex="0"
+          class="collapse mb-4 collapse-arrow border-base-300 bg-base-200 border"
+        >
+          <div class="collapse-title text-xl font-medium">
+            Focus me to see content
+          </div>
+          <div class="collapse-content">
+            <p>tabindex="0" attribute is necessary to make the div focusable</p>
+          </div>
+        </div>
+
+
+        <div
+          tabindex="0"
+          class="collapse b-4  collapse-arrow border-base-300 bg-base-200 border"
+        >
+          <div class="collapse-title text-xl font-medium">
+            Focus me to see content
+          </div>
+          <div class="collapse-content">
+            <p>tabindex="0" attribute is necessary to make the div focusable</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/blog.js"></script>
+  </body>
+</html>
