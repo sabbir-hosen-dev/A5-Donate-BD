@@ -19,10 +19,63 @@ window.onscroll = function () {
   stickyNavbar();
 };
 
-
-
-
 const input = document.getElementsByClassName("donate-input");
 const button = document.getElementsByClassName("donate ");
+const message = document.getElementsByClassName("rong-message");
+const staticAmount = document.getElementsByClassName("staticAmount");
+const balance = document.getElementById("balance");
 
-for(let )
+const nKhali = document.getElementById("nKhali");
+const feni = document.getElementById("feniAmount");
+const tsc = document.getElementById("tscAmount");
+
+let totalAmaunt = parseFloat(balance.innerText);
+let nouaKhaliAmount = parseFloat(nKhali.innerText);
+let feniAmount = parseFloat(feni.innerText);
+let tscAmount = parseFloat(tsc.innerText);
+
+for (let i = 0; i < button.length; i++) {
+  button[i].addEventListener("click", function () {
+    const inputValue = input[i].value;
+
+    if (inputValue == "" || inputValue < 0 || isNaN(inputValue)) {
+      message[i].classList.remove("hidden");
+      input[i].value = "";
+      return;
+
+    } else {
+      const inputBalance = parseFloat(inputValue);
+
+      if (totalAmaunt < inputBalance) {
+        alert("Your Amount id low");
+        input[i].value = "";
+        return;
+
+      } else {
+        const modal = document.getElementById("modal");
+        modal.classList.remove("hidden");
+
+        totalAmaunt = totalAmaunt - inputBalance;
+        console.log(totalAmaunt)
+
+        balance.innerText = totalAmaunt;
+
+        let cardValue = parseFloat(staticAmount[i].innerText);
+
+        staticAmount[i].innerText = cardValue + inputBalance;
+
+
+        
+
+        document
+          .getElementById("modal-cencle")
+          .addEventListener("click", function () {
+            modal.classList.add("hidden");
+          });
+      }
+
+      message[i].classList.add("hidden");
+      input[i].value = "";
+    }
+  });
+}

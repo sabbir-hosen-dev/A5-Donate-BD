@@ -21,18 +21,10 @@ function sectionShow(value) {
   }
 }
 
-function inputValueGetAndValid(id, inputId, balance) {
-  const stringValue = document.getElementById(id).value;
-  const inputValue = Number(stringValue);
-  console.log(stringValue);
-  if (inputValue == "" || isNaN(inputValue) || inputValue < 0) {
-    document.getElementById(inputId).classList.remove("hidden");
-    return;
-  } else {
-    if (balance < inputValue) {
-      alert("Your wallet id low");
-    } else {
-      return inputValue;
-    }
-  }
+
+function historyAdd (){
+  
 }
+
+
+
