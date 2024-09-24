@@ -19,6 +19,9 @@ window.onscroll = function () {
   stickyNavbar();
 };
 
+
+
+// main function 
 const input = document.getElementsByClassName("donate-input");
 const button = document.getElementsByClassName("donate ");
 const message = document.getElementsByClassName("rong-message");
